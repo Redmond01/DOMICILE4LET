@@ -6,8 +6,9 @@ import styles from '../landingPage/mobile/style.module.css'
 import { FaTimes } from 'react-icons/fa'
 
 //reducers
-import { setOffSideNav, setSideNavOn } from '../../redux-store/appSlice/LandingPageSlice/mobileSlice/mobileSlice'
+import { setSideNavOff, setSideNavOn } from '../../redux-store/appSlice/LandingPageSlice/mobileSlice/mobileSlice'
 import { useSelector, useDispatch } from 'react-redux'
+
 
 const NavBar = () => {
     const dispatch = useDispatch()
@@ -16,13 +17,11 @@ const NavBar = () => {
     })
 
     const handleOnSlider = () => {
-        dispatch(setSideNavOn())
-        console.log(sliderState);
+        dispatch(setSideNavOn(true))
     }
 
     const handleOffSlider = () => {
-        // dispatch(setOnSideNav())
-        console.log(sliderState)
+        dispatch(setSideNavOff(false))
     }
 
     return (
@@ -42,15 +41,15 @@ const NavBar = () => {
                 {/* filter animation */}
 
 
-                 {sliderState? <div className={styles.mobile__filter__animation__on}>
-                    <div className='w-full h-[10%] border border-black flex justify-end items-center px-3'>
-                        <FaTimes fill='white' className='text-[calc(1px_+_2svw_+_2svh)]' onClick={handleOffSlider} />
+                 {sliderState?<div className={styles.mobile__filter__animation__on}>
+                    <div className='w-full h-[20%] flex justify-end items-center px-3'>
+                        <FaTimes fill='black' className='text-[calc(1px_+_3svw_+_3svh)]' onClick={handleOffSlider} />
                     </div>
-                    <div className='w-full h-[90%] flex flex-col '>
-                        <div className='w-full h-[25%] border border-black'>rent</div>
-                        <div className='w-full h-[25%] border border-black'>rent</div>
-                        <div className='w-full h-[25%] border border-black'>rent</div>
-                        <div className='w-full h-[25%] border border-black'>rent</div>
+                    <div className='w-full h-[90%] flex flex-col'>
+                        <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>rent</div>
+                        <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>sell</div>
+                        <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>about us</div>
+                        <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>sign up</div>
                     </div>
 
                 </div>:''}
