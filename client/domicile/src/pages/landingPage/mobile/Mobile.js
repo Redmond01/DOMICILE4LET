@@ -18,21 +18,21 @@ import images1 from '../../../assets/image10.png'
 import images2 from '../../../assets/image9.png'
 import images3 from '../../../assets/HousePlant.png'
 import images4 from '../../../assets/logo.png'
-import { FaAlignJustify, FaArrowAltCircleRight, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaAlignJustify, FaArrowAltCircleRight, FaFacebook, FaInstagram, FaLinkedin, FaTimes } from 'react-icons/fa'
 
-import styles from '../../style.module.css'
+import styles from '../mobile/style.module.css'
 
-// import MobileNav from '../../Nav'
+import MobileNav from '../../sharedNav/NavBar'
 
 function Mobile() {
 
     return (
-        <div className="sm:block md:hidden lg:hidden w-full h-[450svh] bg-[#091A2B]">
+        <div className="sm:block md:hidden lg:hidden w-full h-[450svh] bg-[#091A2B] relative">
             {/* <div className="w-full h-[10svh] py-[25px] text-white flex justify-between items-center gap-[2rem] px-[25px]">
                 <img src={MobileLogo} alt="img" className="w-[2.25rem] h-[2rem]"/>
                 <FaAlignJustify className="w-[1.95rem] h-[1.2rem]"/>
             </div> */}
-            {/* <MobileNav/> */}
+            <MobileNav/>
             <div className="w-full h-[35svh] max-h-[40svh] flex justify-center items-center">
                 <div className='w-[90%] h-[90%] flex justify-center items-center flex-col'>
                     <h3 className={styles.mobile}>
