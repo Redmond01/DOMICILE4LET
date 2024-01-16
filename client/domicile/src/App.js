@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/landingPage/App'
+import Rent from './pages/rentPage/App'
 import SharedNav from './pages/sharedNav/NavBar'
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
             <Route path='/' element={<SharedNav/>}/>
+            <Route path='/rent' element={<Rent/>}/>
         </Routes>
       </BrowserRouter>
     </>

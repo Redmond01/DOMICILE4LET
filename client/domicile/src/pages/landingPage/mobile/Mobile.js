@@ -1,15 +1,3 @@
-// import React from 'react'
-
-// const Mobile = () => {
-//   return (
-//     <div className='sm:block md:hidden lg:hidden'>Mobile</div>
-//   )
-// }
-
-// export default Mobile
-
-
-// import MobileLogo from '../../../assets/mobilelogo.png'
 import Home from '../../../assets/sideHome.png'
 import image1 from '../../../assets/image3.png'
 import House1 from '../../../assets/house1.png'
@@ -21,15 +9,22 @@ import images4 from '../../../assets/logo.png'
 import {FaArrowAltCircleRight, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 import styles from '../mobile/style.module.css'
-
 import MobileNav from '../../sharedNav/NavBar'
 
 
-const handleMobileSubit = (e) => {
-  // e.preventDefault
-}
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+
+
 
 function Mobile() {
+  const navigation = useNavigate()
+const handleMobileSubit = (e) => {
+  // const location= useLocation()
+
+  navigation('rent')
+
+
+}
 
   return (
     <div className="sm:block md:hidden lg:hidden w-full h-[450svh] bg-[#091A2B] relative">
@@ -234,7 +229,7 @@ function Mobile() {
                 <h3 className='font-sans font-[500] leading-[100%] text-[calc(1px_+_3svw_+_3svh)] text-[#000]'>
                   Email
                 </h3>
-                <FaArrowAltCircleRight fill='black' className='text-[1.7rem]' />
+                <Link to={'#'}><FaArrowAltCircleRight fill='black' className='text-[1.7rem]' /></Link>
               </div>
               <hr className='w-[98%] h-[3px] bg-black border-[2px] border-black'></hr>
             </div>
@@ -252,9 +247,9 @@ function Mobile() {
 
         </div>
         <div className='w-full h-[9svh] flex justify-center items-center gap-8'>
-          <FaFacebook fill='blue' className='text-[6svh]' />
-          <FaInstagram fill='white' className='text-[6svh]' />
-          <FaLinkedin fill='skyBlue' className='text-[6svh]' />
+          <Link to={'#'}><FaFacebook fill='blue' className='text-[6svh]' /></Link>
+          <Link to={'#'}><FaInstagram fill='white' className='text-[6svh]' /></Link>
+          <Link to={'#'}><FaLinkedin fill='skyblue' className='text-[6svh]' /></Link>
         </div>
       </div>
     </div>

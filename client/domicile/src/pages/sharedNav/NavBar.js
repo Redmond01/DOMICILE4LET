@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import styles from '../landingPage/mobile/style.module.css'
+
+
 import { FaAlignJustify } from 'react-icons/fa'
 import MobileLogo from '../../assets/mobilelogo.png'
-import { Link } from 'react-router-dom'
-import styles from '../landingPage/mobile/style.module.css'
+import { Link, useLocation, useNavigate} from 'react-router-dom'
 import { FaTimes } from 'react-icons/fa'
 
 //reducers
@@ -11,6 +13,11 @@ import { useSelector, useDispatch } from 'react-redux'
 
 
 const NavBar = () => {
+    useEffect(function(){
+        
+    },[])
+    
+    
     const dispatch = useDispatch()
     const sliderState = useSelector(function (state) {
         return state.mobile.SideNavOn
@@ -24,10 +31,12 @@ const NavBar = () => {
         dispatch(setSideNavOff(false))
     }
 
+    const navigate = useNavigate()
+
     return (
         <div>
             {/*mobile shared Nav bar*/}
-            <div className=" sm:flex md:hidden lg:hidden">
+            <div className=" sm:flex md:hidden lg:hidden bg-[#091A2B]">
                 <div className='relative  w-full h-[10svh] py-[25px] text-white flex justify-between items-center'>
                     <div className='w-[50%] h-full flex justify-start items-center px-4'>
                         <Link><img src={MobileLogo} alt="img" className="w-[2.25rem] h-[2rem]" /></Link>
@@ -46,7 +55,7 @@ const NavBar = () => {
                         <FaTimes fill='black' className='text-[calc(1px_+_3svw_+_3svh)]' onClick={handleOffSlider} />
                     </div>
                     <div className='w-full h-[90%] flex flex-col'>
-                        <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>rent</div>
+                      <Link to={'/rent'}><div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>rent</div></Link>
                         <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>sell</div>
                         <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>about us</div>
                         <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>sign up</div>
