@@ -10,7 +10,7 @@
 
 
 // import MobileLogo from '../../../assets/mobilelogo.png'
-import Home from '../../../assets/homes.png'
+import Home from '../../../assets/sideHome.png'
 import image1 from '../../../assets/image3.png'
 import House1 from '../../../assets/house1.png'
 import House2 from '../../../assets/house2.png'
@@ -56,8 +56,8 @@ function Mobile() {
                     </form>
                 </div>
             </div>
-            <div className="w-auto h-auto ">
-                <img src={Home} alt="img" className='w-full h-full' />
+            <div className="w-full h-[auto] ">
+                <img src={Home} alt="img" className='w-full h-[auto] object-contain' />
             </div>
             <div className=" w-full h-[110svh] max-h-[130svh] bg-[#D9D9D9]">
                 <div className='w-full h-[5%]'></div>
