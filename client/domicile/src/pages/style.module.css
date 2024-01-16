@@ -1,0 +1,132 @@
+.gradient{
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(239deg, rgba(9, 26, 43, 0.69) 25.62%, rgba(9, 26, 43, 0.93) 49.87%, rgba(9, 26, 43, 0.97) 57.57%, rgba(9, 26, 43, 0.99) 66.04%, #091A2B 79.77%, rgba(9, 26, 43, 0.84) 99.52%);
+    position: relative;
+    z-index: 10;
+    object-fit: contain;
+}
+.intro{
+    color: #FFF;
+    text-shadow: 6px 6px 3px rgba(0, 0, 0, 0.25);
+    font-family: sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%; /* 96px */
+    letter-spacing: 10.24px;
+    text-transform: capitalize;
+}
+.blur1{
+    width: 12rem;
+    height: 12rem;
+    background-color: white;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    filter: blur(150px);
+    z-index: 20;
+}
+.blur2{
+    width: 12rem;
+    height: 12rem;
+    background-color: white;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    filter: blur(150px);
+    z-index: 20;
+}
+.inside{
+    position: absolute;
+    top: 20%;
+    left: 25.8%;
+    height: 50%;
+}
+.slideFilter{
+    position: relative;
+    animation-duration: 1s;
+    animation-name: slidefilter;
+    width: 24.25rem;
+    height: 40.125rem;
+    background-color: #D9D9D9;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+@keyframes slidefilter {
+    0%{
+        left: -100px;
+        top: 0px;
+    }
+    100%{
+        left: 0px;
+        top: 0px;
+    }
+}
+.range{
+    -webkit-appearance: none;
+    appearance: none;
+    /* background: white; */
+    cursor: pointer;
+    width: 18rem;
+    height: 0.38rem;
+    border-radius: 4rem;
+}
+.range::-webkit-slider-thumb{
+    background-color: #091A2B;
+    -webkit-appearance: none;
+    height: 0.9rem;
+    width: 0.9rem;
+    border-radius:100%;
+}
+
+/*      MPBILE STYLING*/
+.mobile{
+    color: #FFF;
+text-align: center;
+text-shadow: 6px 6px 3px rgba(0, 0, 0, 0.25);
+font-family: sans-serif;
+font-size: calc(1px + 3vw + 3vh);
+font-style: normal;
+font-weight: 900;
+line-height: 150%; /* 2.8125rem */
+letter-spacing: 0.3rem;
+text-transform: capitalize;
+}
+/* w-full h-[60rem] border border-white */
+.mobile1{
+    width: 100%;
+    height: 100svh;
+    max-height: 130svh;
+    padding:0.2rem;
+    background-image: url(../assets/bg3.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.mobile2{
+    width: 100%;
+    height:100svh;
+    max-height: 130svh;
+    background-image: url('../assets/bg4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.mobile3{
+    width: 100%;
+    height: 40vh;
+    border: 1px solid black;
+    background-image: url('../assets/footer.png');
+    background-size: cover;
+}
+.dd{
+    @apply text-[clamp(4px_8vh_12px)];
+}

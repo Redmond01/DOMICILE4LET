@@ -1,9 +1,15 @@
-import React from 'react'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/landingPage/App'
 function App() {
   return (
     <>
-    <div className='bg-yellow-600'>hello lthere</div>    </>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+            
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
