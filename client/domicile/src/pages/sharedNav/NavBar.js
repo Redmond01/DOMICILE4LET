@@ -39,7 +39,7 @@ const NavBar = () => {
             <div className=" sm:flex md:hidden lg:hidden bg-[#091A2B]">
                 <div className='relative  w-full h-[10svh] py-[25px] text-white flex justify-between items-center'>
                     <div className='w-[50%] h-full flex justify-start items-center px-4'>
-                        <Link><img src={MobileLogo} alt="img" className="w-[2.25rem] h-[2rem]" /></Link>
+                        <Link to={'/'}><img src={MobileLogo} alt="img" className="w-[2.25rem] h-[2rem]" /></Link>
                     </div>
                     <div className='w-[50%] h-full flex justify-end items-center px-4'>
                         <FaAlignJustify fill='white' className='text-[calc(1px_+_2svw_+_2svh)]' onClick={handleOnSlider} />
