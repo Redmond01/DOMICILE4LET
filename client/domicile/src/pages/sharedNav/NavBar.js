@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import styles from '../landingPage/mobile/style.module.css'
 
 
 import { FaAlignJustify } from 'react-icons/fa'
 import MobileLogo from '../../assets/mobilelogo.png'
-import { Link, useLocation, useNavigate} from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FaTimes } from 'react-icons/fa'
 
 //reducers
@@ -13,25 +13,34 @@ import { useSelector, useDispatch } from 'react-redux'
 
 
 const NavBar = () => {
-    useEffect(function(){
-        
-    },[])
-    
-    
+
+
     const dispatch = useDispatch()
+    const location = useLocation()
+    const currentUrl = useRef(location.pathname)
+
+
+
     const sliderState = useSelector(function (state) {
         return state.mobile.SideNavOn
     })
+    const handleOnSlider = useCallback(function () {
+        dispatch(setSideNavOn(true));
+    }, [dispatch])
 
-    const handleOnSlider = () => {
-        dispatch(setSideNavOn(true))
-    }
+    const handleOffSlider = useCallback(function () {
+        dispatch(setSideNavOff(false));
+    }, [dispatch])
 
-    const handleOffSlider = () => {
-        dispatch(setSideNavOff(false))
-    }
 
-    const navigate = useNavigate()
+    useEffect(function () {
+        const currentUrlN = location.pathname
+        if (currentUrlN !== currentUrl) {
+            handleOffSlider()
+        }
+    }, [location.pathname, handleOffSlider])
+
+    // const navigate = useNavigate()
 
     return (
         <div>
@@ -50,18 +59,18 @@ const NavBar = () => {
                 {/* filter animation */}
 
 
-                 {sliderState?<div className={styles.mobile__filter__animation__on}>
+                {sliderState ? <div className={styles.mobile__filter__animation__on}>
                     <div className='w-full h-[20%] flex justify-end items-center px-3'>
                         <FaTimes fill='black' className='text-[calc(1px_+_3svw_+_3svh)]' onClick={handleOffSlider} />
                     </div>
                     <div className='w-full h-[90%] flex flex-col'>
-                      <Link to={'/rent'}><div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>rent</div></Link>
-                        <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>sell</div>
+                        <Link to={'/rent'}><div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>rent</div></Link>
+                        <Link to={'/'}><div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>sell</div></Link>
                         <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>about us</div>
                         <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>sign up</div>
                     </div>
 
-                </div>:''}
+                </div> : ''}
 
             </div>
         </div>
