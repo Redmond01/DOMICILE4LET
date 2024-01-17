@@ -19,8 +19,6 @@ const NavBar = () => {
     const location = useLocation()
     const currentUrl = useRef(location.pathname)
 
-
-
     const sliderState = useSelector(function (state) {
         return state.mobile.SideNavOn
     })
@@ -40,7 +38,6 @@ const NavBar = () => {
         }
     }, [location.pathname, handleOffSlider])
 
-    // const navigate = useNavigate()
 
     return (
         <div>
@@ -64,10 +61,10 @@ const NavBar = () => {
                         <FaTimes fill='black' className='text-[calc(1px_+_3svw_+_3svh)]' onClick={handleOffSlider} />
                     </div>
                     <div className='w-full h-[90%] flex flex-col'>
-                        <Link to={'/rent'}><div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>rent</div></Link>
-                        <Link to={'/'}><div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>sell</div></Link>
-                        <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>about us</div>
-                        <div className='w-full h-[20%] text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins flex justify-center items-center'>sign up</div>
+                        <Link to={'/'} className='w-full h-[20%] flex justify-center items-center'><div className=' text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins '>home</div></Link>
+                        <Link to={'/rent'} className='w-full h-[20%] flex justify-center items-center'><div className=' text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins '>rent</div></Link>
+                        <Link to={'/sell'} className='w-full h-[20%] flex justify-center items-center'><div className=' text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins '>sell</div></Link>
+                        <Link to={'/signup'} className='w-full h-[20%] flex justify-center items-center'><div className=' text-center text-[calc(1px_+_3svw_+_3svh)] text-[#6f6f6f] capitalize font-[800] font-poppins '>signup</div></Link>
                     </div>
 
                 </div> : ''}
