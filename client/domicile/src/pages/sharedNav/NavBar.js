@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef} from 'react'
 import styles from '../landingPage/mobile/style.module.css'
 
 
 import { FaAlignJustify } from 'react-icons/fa'
 import MobileLogo from '../../assets/mobilelogo.png'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation} from 'react-router-dom'
 import { FaTimes } from 'react-icons/fa'
 
 //reducers
@@ -13,12 +13,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 
 const NavBar = () => {
-
-
     const dispatch = useDispatch()
-    const location = useLocation()
-    const currentUrl = useRef(location.pathname)
-
     const sliderState = useSelector(function (state) {
         return state.mobile.SideNavOn
     })
@@ -30,15 +25,16 @@ const NavBar = () => {
         dispatch(setSideNavOff(false));
     }, [dispatch])
 
+    const location = useLocation()
 
-    useEffect(function () {
-        const currentUrlN = location.pathname
-        if (currentUrlN !== currentUrl) {
+    const url = useRef(location.pathname)
+
+    useEffect(function(){
+        const currentUrl= location.pathname
+        if(currentUrl !== url){
             handleOffSlider()
         }
-    }, [location.pathname, handleOffSlider])
-
-
+    },[location.pathname, handleOffSlider])
     return (
         <div>
             {/*mobile shared Nav bar*/}
@@ -54,8 +50,6 @@ const NavBar = () => {
 
 
                 {/* filter animation */}
-
-
                 {sliderState ? <div className={styles.mobile__filter__animation__on}>
                     <div className='w-full h-[20%] flex justify-end items-center px-3'>
                         <FaTimes fill='black' className='text-[calc(1px_+_3svw_+_3svh)]' onClick={handleOffSlider} />

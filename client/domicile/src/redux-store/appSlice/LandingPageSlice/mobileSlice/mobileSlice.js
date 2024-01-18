@@ -14,7 +14,6 @@ const mobilePageSlice = createSlice({
             state.SideNavOn = actions.payload
             return
         }
-
     }
 })
 export const {setSideNavOn, setSideNavOff} = mobilePageSlice.actions
