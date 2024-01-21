@@ -26,6 +26,7 @@ const handleMobileSubit = (e) => {
 }
 
   return (
+    
     <div className="sm:block md:hidden lg:hidden w-full h-[450svh] bg-[#091A2B] relative">
       {/* <div className="w-full h-[10svh] py-[25px] text-white flex justify-between items-center gap-[2rem] px-[25px]">
                 <img src={MobileLogo} alt="img" className="w-[2.25rem] h-[2rem]"/>
