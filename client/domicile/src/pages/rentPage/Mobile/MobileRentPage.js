@@ -8,11 +8,11 @@ const MobileRentPage = () => {
     <div className='sm:block md:hidden lg:hidden'>
       <MobileNav />
       <div className='bg-[#D9D9D9] w-full h-[200svh] flex flex-col justify-center items-center gap-5'>
-        <div className='w-[90%] h-[10%] space-y-2'>
+        <div className='w-[90%] h-[7%] space-y-2'>
           <h3 className='w-full h-[30%]  text-[calc(1px_+_2svw_+_2svh)] capitalize text-[#091A2B] text-center font-poppins font-[600]'>rent listing</h3>
           <div className='w-full h-[70%] border border-black rounded-lg'>
             <form className='flex justify-center items-center w-full h-full'>
-              <input type='text' className='w-[80%] h-[80%] placeholder:px-2 placeholder:font-poppins bg-transparent outline-none' placeholder='saapade' />
+              <input type='text' className='w-[80%] h-[80%] placeholder:px-2 placeholder:font-poppins bg-transparent outline-none text-[calc(1px_+_2svw_+_2svh)] px-2' placeholder='saapade' />
               <div className='w-[20%] h-full  border border-black flex items-center bg-[#091A2B] rounded-e-lg'>
                 <BsSearch className='w-full fill-white text-[calc(1px_+_3svw_+_3svh)]' />
               </div>
