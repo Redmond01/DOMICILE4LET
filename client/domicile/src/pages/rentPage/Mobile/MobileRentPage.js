@@ -7,7 +7,7 @@ const MobileRentPage = () => {
   return (
     <div className='sm:block md:hidden lg:hidden'>
       <MobileNav />
-      <div className='bg-[#D9D9D9] w-full h-[200svh] flex flex-col justify-center items-center gap-5'>
+      <div className='bg-[#D9D9D9] w-full h-[200svh] flex flex-col justify-start items-center gap-5'>
         <div className='w-[90%] h-[7%] space-y-2'>
           <h3 className='w-full h-[30%]  text-[calc(1px_+_2svw_+_2svh)] capitalize text-[#091A2B] text-center font-poppins font-[600]'>rent listing</h3>
           <div className='w-full h-[70%] border border-black rounded-lg'>
@@ -19,8 +19,8 @@ const MobileRentPage = () => {
             </form>
           </div>
         </div>
-        <div className='w-[90%] h-[90%] flex flex-col flex-wrap gap-2'>
-          <div className='w-[50%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
+        <div className='w-[90%] h-[90%] flex flex-col flex-wrap gap-4'>
+          <div className='w-[48%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
             <div className='w-full h-[60%] '>
               <img src={Image1} alt='img' className='object-fill w-full h-full' />
             </div>
@@ -43,7 +43,7 @@ const MobileRentPage = () => {
               </div>
             </div>
           </div>
-          <div className='w-[50%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
+          <div className='w-[48%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
             <div className='w-full h-[60%] '>
               <img src={Image1} alt='img' className='object-fill w-full h-full' />
             </div>
@@ -66,7 +66,7 @@ const MobileRentPage = () => {
               </div>
             </div>
           </div>
-          <div className='w-[50%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
+          <div className='w-[48%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
             <div className='w-full h-[60%] '>
               <img src={Image1} alt='img' className='object-fill w-full h-full' />
             </div>
@@ -89,7 +89,7 @@ const MobileRentPage = () => {
               </div>
             </div>
           </div>
-          <div className='w-[50%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
+          <div className='w-[48%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
             <div className='w-full h-[60%] '>
               <img src={Image1} alt='img' className='object-fill w-full h-full' />
             </div>
@@ -112,7 +112,7 @@ const MobileRentPage = () => {
               </div>
             </div>
           </div>
-          <div className='w-[50%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
+          <div className='w-[48%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
             <div className='w-full h-[60%] '>
               <img src={Image1} alt='img' className='object-fill w-full h-full' />
             </div>
@@ -135,7 +135,7 @@ const MobileRentPage = () => {
               </div>
             </div>
           </div>
-          <div className='w-[50%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
+          <div className='w-[48%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
             <div className='w-full h-[60%] '>
               <img src={Image1} alt='img' className='object-fill w-full h-full' />
             </div>
@@ -158,7 +158,7 @@ const MobileRentPage = () => {
               </div>
             </div>
           </div>
-          <div className='w-[50%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
+          <div className='w-[48%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
             <div className='w-full h-[60%] '>
               <img src={Image1} alt='img' className='object-fill w-full h-full' />
             </div>
@@ -181,7 +181,7 @@ const MobileRentPage = () => {
               </div>
             </div>
           </div>
-          <div className='w-[50%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
+          <div className='w-[48%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
             <div className='w-full h-[60%] '>
               <img src={Image1} alt='img' className='object-fill w-full h-full' />
             </div>
