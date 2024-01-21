@@ -12,14 +12,13 @@ import styles from '../mobile/style.module.css'
 import MobileNav from '../../sharedNav/NavBar'
 
 
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 
 function Mobile() {
   const navigation = useNavigate()
 const handleMobileSubit = (e) => {
-  // const location= useLocation()
 
   navigation('rent')
 
@@ -144,9 +143,9 @@ const handleMobileSubit = (e) => {
             our values.
           </h3>
         </div>
-        <div className="w-full h-[30%] flex justify-center items-center relative">
-          <img src={House1} alt="img" className="w-[20svh] h-[auto] absolute top-[0%]" />
-          <img src={House2} alt="img" className="w-[20svh] h-[auto] absolute top-[20%]" />
+        <div className="w-full h-[30%] flex justify-center items-center relative z-[1]">
+          <img src={House1} alt="img" className="w-[20svh] h-[auto] absolute top-[0%] z-[1]" />
+          <img src={House2} alt="img" className="w-[20svh] h-[auto] absolute top-[20%] z-[1] " />
         </div>
         <div className='w-full h-[60%] '>
           <div className="w-full h-[10%] flex justify-center items-center">

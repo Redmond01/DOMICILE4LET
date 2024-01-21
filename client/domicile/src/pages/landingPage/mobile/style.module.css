@@ -150,7 +150,7 @@ text-transform: capitalize;
     }
 }
 .j{
-    @apply sticky top-[0%];
+    @apply sticky z-[10%] top-[0%];
 }
 /* .mobile__filter__animation__off{
     width: 100%;

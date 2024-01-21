@@ -36,7 +36,7 @@ const NavBar = () => {
         }
     },[location.pathname, handleOffSlider])
     return (
-        <div className='top-0 sticky'>
+        <div className='top-0 sticky z-[100]'>
             {/*mobile shared Nav bar*/}
             <div className=" sm:flex md:hidden lg:hidden bg-[#091A2B]">
                 <div className='relative w-full h-[10svh] py-[25px] text-white flex justify-between items-center'>
