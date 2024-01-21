@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef} from 'react'
 import styles from '../landingPage/mobile/style.module.css'
 
 
-import { FaAlignJustify,FaHeadset, FaSignOutAlt } from 'react-icons/fa'
+import { FaAlignJustify,FaHeadset, FaSignOutAlt, FaTimes } from 'react-icons/fa'
 import MobileLogo from '../../assets/mobilelogo.png'
 import { Link, useLocation} from 'react-router-dom'
 import { BsArrowRightSquare, BsHouse, BsBagCheck , BsCart2, BsPeople, BsSliders} from 'react-icons/bs'
@@ -52,35 +52,35 @@ const NavBar = () => {
                 {/* filter animation */}
                 {sliderState ? <div className={styles.mobile__filter__animation__on}>
                     <div className='w-full h-[10%] flex justify-between items-center px-3'>
-                        <BsArrowRightSquare className='text-[calc(1px_+_2.5svw_+_2.5svh)] fill-[#091A2B]' onClick={handleOffSlider} />
+                        <FaTimes className='text-[calc(1px_+_2.5svw_+_2.5svh)] fill-[#091A2B]' onClick={handleOffSlider} />
                         <BsSliders className='text-[calc(1px_+_2.5svw_+_2.5svh)] fill-[#091A2B] border border-black rounded-full p-1' />
                     </div>
                     <div className='w-full h-[90%] flex flex-col py-2' >
                     <div className='w-full h-[70%] flex flex-col gap-4'>
-                        <div className='w-full h-[7svh] border border-white flex items-center gap-2 px-6'>
+                        <Link to={'/'} className='w-full h-[7svh] flex items-center gap-2 px-6'>
                         <BsHouse className='fill-[#091A2B] text-[calc(1px_+_2.5svw_+_2.5svh)]'/>
                         <h3 className='text-[400] font-poppins text-[#091A2B] text-[calc(1px_+_2svw_+_2svh)]'>Home</h3>
-                        </div>
-                        <div className='w-full h-[7svh] border border-white flex items-center gap-2 px-6'>
+                        </Link>
+                        <Link to={'/rent'} className='w-full h-[7svh] flex items-center gap-2 px-6'>
                         <BsBagCheck className='fill-[#091A2B] text-[calc(1px_+_2.5svw_+_2.5svh)]'/>
                         <h3 className='text-[400] font-poppins text-[#091A2B] text-[calc(1px_+_2svw_+_2svh)]'>Rent</h3>
-                        </div>
-                        <div className='w-full h-[7svh] border border-white flex items-center gap-2 px-6'>
+                        </Link>
+                        <Link to={'/sell'} className='w-full h-[7svh] flex items-center gap-2 px-6'>
                         <BsCart2 className='fill-[#091A2B] text-[calc(1px_+_2.5svw_+_2.5svh)]'/>
                         <h3 className='text-[400] font-poppins text-[#091A2B] text-[calc(1px_+_2svw_+_2svh)]'>Sell</h3>
-                        </div>
-                        <div className='w-full h-[7svh] border border-white flex items-center gap-2 px-6'>
+                        </Link>
+                        <Link to={'/about'} className='w-full h-[7svh] flex items-center gap-2 px-6'>
                         <BsPeople className='fill-[#091A2B] text-[calc(1px_+_2.5svw_+_2.5svh)]'/>
                         <h3 className='text-[400] font-poppins text-[#091A2B] text-[calc(1px_+_2svw_+_2svh)]'>About Us</h3>
-                        </div>
+                        </Link>
                     </div>
                     <div className='w-full h-[30%] px-5 flex justify-center flex-col gap-4'>
                         <div className='w-full h-[7svh] flex items-center gap-4 px-6 bg-[#091A2B] rounded-lg'>
-                            <FaHeadset className='fill-[white] text-[calc(1px_+_2.5svw_+_svh)]'/>
+                            <FaHeadset className='fill-[white] text-[calc(1px_+_2.5svw_+_2.5svh)]'/>
                             <h3 className='text-white font-poppins font-[400] capitalize text-[calc(1px_+_2svw_+_2svh)]'>contact support</h3>
                         </div>
                         <div className='w-full h-[7svh] flex items-center gap-4 px-6 bg-[#091A2B] rounded-lg'>
-                            <FaSignOutAlt className='fill-[white] text-[calc(1px_+_2.5svw_+_svh)]'/>
+                            <FaSignOutAlt className='fill-[white] text-[calc(1px_+_2.5svw_+_2.5svh)]'/>
                             <h3 className='text-white font-poppins font-[400] capitalize text-[calc(1px_+_2svw_+_2svh)]'>contact support</h3>
                         </div>
                     </div>

@@ -135,9 +135,8 @@ text-transform: capitalize;
     top: 0%;
     right: 0%;
     background-color: white;
-    animation-duration: 1s;
+    animation: ease-in-out 1.5s;
     animation-name: showFilter;
-    /* animation-delay: .2s; */
 }
 
 @keyframes showFilter {
