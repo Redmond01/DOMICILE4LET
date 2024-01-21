@@ -1,11 +1,12 @@
 import React, { useCallback, useEffect, useRef} from 'react'
 import styles from '../landingPage/mobile/style.module.css'
-
+import styless from '../sharedNav/styles.module.css'
+import images4 from '../../assets/logo.png'
 
 import { FaAlignJustify,FaHeadset, FaSignOutAlt, FaTimes } from 'react-icons/fa'
 import MobileLogo from '../../assets/mobilelogo.png'
-import { Link, useLocation} from 'react-router-dom'
-import {BsHouse, BsBagCheck , BsCart2, BsPeople, BsSliders} from 'react-icons/bs'
+import { Link, useLocation,Outlet} from 'react-router-dom'
+import {BsHouse, BsBagCheck , BsCart2, BsPeople, BsSliders, BsFacebook, BsLinkedin, BsInstagram} from 'react-icons/bs'
 
 //reducers
 import { setSideNavOff, setSideNavOn } from '../../redux-store/appSlice/LandingPageSlice/mobileSlice/mobileSlice'
@@ -36,6 +37,7 @@ const NavBar = () => {
         }
     },[location.pathname, handleOffSlider])
     return (
+        <>
         <div className='top-0 sticky z-[100]'>
             {/*mobile shared Nav bar*/}
             <div className=" sm:flex md:hidden lg:hidden bg-[#091A2B]">
@@ -89,6 +91,24 @@ const NavBar = () => {
                 </div> :''}
             </div>
         </div>
+            <Outlet/>
+            
+
+            <div className={styless.footer}>
+            <div className='w-full h-[10svh] flex justify-center items-center'>
+              <img src={images4} alt='img' className='w-[25svh] h-auto' />
+            </div>
+            <div className='w-full h-[20svh] '>
+
+            </div>
+            <div className='w-full h-[9svh] flex justify-center items-center gap-8'>
+              <Link to={'#'}><BsFacebook fill='blue' className='text-[6svh]' /></Link>
+              <Link to={'#'}><BsInstagram fill='white' className='text-[6svh]' /></Link>
+              <Link to={'#'}><BsLinkedin fill='skyblue' className='text-[6svh]' /></Link>
+            </div>
+          </div>
+        </>
+
     )
 }
 

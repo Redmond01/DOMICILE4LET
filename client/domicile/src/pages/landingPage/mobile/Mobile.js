@@ -9,7 +9,6 @@ import images4 from '../../../assets/logo.png'
 import {FaArrowAltCircleRight, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 import styles from '../mobile/style.module.css'
-import MobileNav from '../../sharedNav/NavBar'
 
 
 import { Link, useNavigate } from 'react-router-dom'
@@ -28,11 +27,6 @@ const handleMobileSubit = (e) => {
   return (
     
     <div className="sm:block md:hidden lg:hidden w-full h-[450svh] bg-[#091A2B] relative">
-      {/* <div className="w-full h-[10svh] py-[25px] text-white flex justify-between items-center gap-[2rem] px-[25px]">
-                <img src={MobileLogo} alt="img" className="w-[2.25rem] h-[2rem]"/>
-                <FaAlignJustify className="w-[1.95rem] h-[1.2rem]"/>
-            </div> */}
-      <MobileNav />
       <div className="w-full h-[35svh] max-h-[40svh] flex justify-center items-center">
         <div className='w-[90%] h-[90%] flex justify-center items-center flex-col'>
           <h3 className={styles.mobile}>
