@@ -9,20 +9,20 @@ const MobileRentPage = () => {
   return (
       <div className='sm:block md:hidden lg:hidden'>
         <MobileNav />
-        <div className='bg-[#D9D9D9] w-full h-[200svh] flex flex-col justify-start items-center gap-5'>
+        <div className='bg-[#D9D9D9] w-full h-[250svh] flex flex-col justify-start items-center gap-5'>
           <div className='w-[90%] h-[7%] space-y-2'>
-            <h3 className='w-full h-[30%]  text-[calc(1px_+_2svw_+_2svh)] capitalize text-[#091A2B] text-center font-poppins font-[600]'>rent listing</h3>
-            <div className='w-full h-[70%] border border-black rounded-lg'>
+            <h3 className='w-full h-[30%] text-[calc(1px_+_2svw_+_2svh)] capitalize text-[#091A2B] text-center font-poppins font-[600]'>rent listing</h3>
+            <div className='w-full h-[70%] rounded-lg border border-black'>
               <form className='flex justify-center items-center w-full h-full'>
                 <input type='text' className='w-[80%] h-[80%] placeholder:px-2 placeholder:font-poppins bg-transparent outline-none text-[calc(1px_+_2svw_+_2svh)] px-2' placeholder='saapade' />
-                <div className='w-[20%] h-full  border border-black flex items-center bg-[#091A2B] rounded-e-lg'>
+                <div className='w-[20%] h-full  flex items-center bg-[#091A2B] rounded-e-lg'>
                   <BsSearch className='w-full fill-white text-[calc(1px_+_3svw_+_3svh)]' />
                 </div>
               </form>
             </div>
           </div>
 
-          <div className='w-[90%] h-[70%] flex flex-col flex-wrap gap-4'>
+          <div className='w-[90%] h-[77%] flex flex-col flex-wrap gap-4'>
             <div className='w-[48%] h-[40svh]  rounded-2xl bg-white border border-[#091A2B] shadow-black shadow-lg'>
               <div className='w-full h-[60%] '>
                 <img src={Image1} alt='img' className='object-fill w-full h-full' />
