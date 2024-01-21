@@ -5,7 +5,7 @@ import styles from '../landingPage/mobile/style.module.css'
 import { FaAlignJustify,FaHeadset, FaSignOutAlt, FaTimes } from 'react-icons/fa'
 import MobileLogo from '../../assets/mobilelogo.png'
 import { Link, useLocation} from 'react-router-dom'
-import { BsArrowRightSquare, BsHouse, BsBagCheck , BsCart2, BsPeople, BsSliders} from 'react-icons/bs'
+import {BsHouse, BsBagCheck , BsCart2, BsPeople, BsSliders} from 'react-icons/bs'
 
 //reducers
 import { setSideNavOff, setSideNavOn } from '../../redux-store/appSlice/LandingPageSlice/mobileSlice/mobileSlice'
@@ -36,10 +36,10 @@ const NavBar = () => {
         }
     },[location.pathname, handleOffSlider])
     return (
-        <div>
+        <div className='top-0 sticky'>
             {/*mobile shared Nav bar*/}
             <div className=" sm:flex md:hidden lg:hidden bg-[#091A2B]">
-                <div className='relative  w-full h-[10svh] py-[25px] text-white flex justify-between items-center'>
+                <div className='relative w-full h-[10svh] py-[25px] text-white flex justify-between items-center'>
                     <div className='w-[50%] h-full flex justify-start items-center px-4'>
                         <Link to={'/'}><img src={MobileLogo} alt="img" className="w-[2.25rem] h-[2rem]" /></Link>
                     </div>
@@ -87,7 +87,6 @@ const NavBar = () => {
                     </div>
 
                 </div> :''}
-
             </div>
         </div>
     )
