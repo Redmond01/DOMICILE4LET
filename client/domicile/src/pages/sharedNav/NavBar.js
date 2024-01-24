@@ -14,6 +14,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 
 const NavBar = () => {
+
     const dispatch = useDispatch()
     const sliderState = useSelector(function (state) {
         return state.mobile.SideNavOn
@@ -36,6 +37,7 @@ const NavBar = () => {
             handleOffSlider()
         }
     },[location.pathname, handleOffSlider])
+
     return (
         <>
         <div className='top-0 sticky z-[100]'>
@@ -83,11 +85,10 @@ const NavBar = () => {
                         </div>
                         <div className='w-full h-[7svh] flex items-center gap-4 px-6 bg-[#091A2B] rounded-lg'>
                             <FaSignOutAlt className='fill-[white] text-[calc(1px_+_2.5svw_+_2.5svh)]'/>
-                            <h3 className='text-white font-poppins font-[400] capitalize text-[calc(1px_+_2svw_+_2svh)]'>contact support</h3>
+                            <h3 className='text-white font-poppins font-[400] capitalize text-[calc(1px_+_2svw_+_2svh)]'>sign out</h3>
                         </div>
                     </div>
                     </div>
-
                 </div> :''}
             </div>
         </div>
